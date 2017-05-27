@@ -47,5 +47,5 @@ public interface IContractCorpAccountService {
      * @param anCustNo
      * @return
      */
-    String webQueryCorpAccountInfo(Long anCustNo);
+    String webQueryCorpAccountInfo(Long anCustNo, int anFlag, int anPageNum, int anPageSize);
 }

@@ -39,5 +39,5 @@ public interface IContractSignerAccountService {
      * @param anCustNo
      * @return
      */
-    String webQuerySignerAccountInfo(Long anCustNo);
+    String webQuerySignerAccountInfo(Long anCustNo, int anFlag, int anPageNum, int anPageSize);
 }
