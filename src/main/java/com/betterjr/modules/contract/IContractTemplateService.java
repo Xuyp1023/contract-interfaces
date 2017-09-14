@@ -10,6 +10,8 @@ package com.betterjr.modules.contract;
 import java.util.List;
 import java.util.Map;
 
+import com.betterjr.modules.contract.data.ContractTempStampPlaceData;
+
 /**
  * @author liuwl
  *
@@ -17,6 +19,7 @@ import java.util.Map;
 public interface IContractTemplateService {
     /**
      * 查询公司拥有标准合同
+     * 
      * @param anCustNo
      * @param anPageSize
      * @param anPageNum
@@ -28,6 +31,7 @@ public interface IContractTemplateService {
 
     /**
      * 查询公司未拥有标准合同
+     * 
      * @param anCustNo
      * @param anTypeId
      * @return
@@ -36,6 +40,7 @@ public interface IContractTemplateService {
 
     /**
      * 启用标准合同
+     * 
      * @param anCustNo
      * @param anStandardTypeIds
      * @return
@@ -44,6 +49,7 @@ public interface IContractTemplateService {
 
     /**
      * 移除未使用标准合同
+     * 
      * @param anCustNo
      * @param anStandardTypeIds
      * @return
@@ -52,6 +58,7 @@ public interface IContractTemplateService {
 
     /**
      * 获取未使用的合同模板列表
+     * 
      * @param anCustNo
      * @param anTypeId
      * @param anFlag
@@ -63,6 +70,7 @@ public interface IContractTemplateService {
 
     /**
      * 查询电子合同文本
+     * 
      * @param anCustNo
      * @param anBusinStatus
      * @param anStartDate
@@ -76,6 +84,7 @@ public interface IContractTemplateService {
 
     /**
      * 查询电子合同文本
+     * 
      * @param anParam
      * @param anFlag
      * @param anPageNum
@@ -86,6 +95,7 @@ public interface IContractTemplateService {
 
     /**
      * 审核电子合同文本
+     * 
      * @param anTemplateId
      * @param anAuditStatus
      * @param anAuditRemark
@@ -95,6 +105,7 @@ public interface IContractTemplateService {
 
     /**
      * 上传电子合同 模板，示例文件
+     * 
      * @param anParam
      * @return
      */
@@ -112,6 +123,7 @@ public interface IContractTemplateService {
 
     /**
      * 查看详情
+     * 
      * @param anId
      * @return
      */
@@ -119,6 +131,7 @@ public interface IContractTemplateService {
 
     /**
      * 查询电子合同模板
+     * 
      * @param anCustNo
      * @param anBusinStatus
      * @param anStartDate
@@ -132,6 +145,7 @@ public interface IContractTemplateService {
 
     /**
      * 查询电子合同模板
+     * 
      * @param anCustNo
      * @param anBusinStatus
      * @param anStartDate
@@ -145,6 +159,7 @@ public interface IContractTemplateService {
 
     /**
      * 上传电子合同 模板，示例文件
+     * 
      * @param anTemplateId
      * @param anOriginTemplateId
      * @param anOrginSimpleId
@@ -175,4 +190,6 @@ public interface IContractTemplateService {
      * @return
      */
     String webQueryTemplateLog(Long anTemplateId);
+
+    public ContractTempStampPlaceData findStampPlaceData(final Long anTemplateId, final Integer anOrder);
 }
