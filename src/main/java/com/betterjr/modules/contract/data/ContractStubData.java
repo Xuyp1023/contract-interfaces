@@ -28,7 +28,7 @@ public class ContractStubData implements java.io.Serializable {
     /**
      * 签署顺序
      */
-    private Long sequence;
+    private Integer sequence;
 
     /**
      * 操作员编号
@@ -120,11 +120,20 @@ public class ContractStubData implements java.io.Serializable {
      * 在电子合同服务商那边的签署记录id
      */
     private String signServiceId;
+    private Long contractTemplateId;
 
     /**
-     * 机构
+     * 签约结果数据
      */
-    private String operOrg;
+    private byte[] result;
+
+    public Long getContractTemplateId() {
+        return this.contractTemplateId;
+    }
+
+    public void setContractTemplateId(final Long anContractTemplateId) {
+        this.contractTemplateId = anContractTemplateId;
+    }
 
     public Long getId() {
         return id;
@@ -150,11 +159,11 @@ public class ContractStubData implements java.io.Serializable {
         this.signatory = signatory;
     }
 
-    public Long getSequence() {
+    public Integer getSequence() {
         return sequence;
     }
 
-    public void setSequence(final Long sequence) {
+    public void setSequence(final Integer sequence) {
         this.sequence = sequence;
     }
 
@@ -294,20 +303,20 @@ public class ContractStubData implements java.io.Serializable {
         this.custName = custName;
     }
 
-    public String getOperOrg() {
-        return operOrg;
-    }
-
-    public void setOperOrg(final String operOrg) {
-        this.operOrg = operOrg;
-    }
-
     public String getSignServiceId() {
         return this.signServiceId;
     }
 
     public void setSignServiceId(final String anSignServiceId) {
         this.signServiceId = anSignServiceId;
+    }
+
+    public byte[] getResult() {
+        return this.result;
+    }
+
+    public void setResult(final byte[] anResult) {
+        this.result = anResult;
     }
 
     @Override
@@ -337,7 +346,6 @@ public class ContractStubData implements java.io.Serializable {
         sb.append(", docStatus=").append(docStatus);
         sb.append(", custNo=").append(custNo);
         sb.append(", custName=").append(custName);
-        sb.append(", operOrg=").append(operOrg);
         sb.append(", signServiceId=").append(signServiceId);
         sb.append("]");
         return sb.toString();
@@ -377,7 +385,6 @@ public class ContractStubData implements java.io.Serializable {
                 && (this.getDocStatus() == null ? other.getDocStatus() == null : this.getDocStatus().equals(other.getDocStatus()))
                 && (this.getCustNo() == null ? other.getCustNo() == null : this.getCustNo().equals(other.getCustNo()))
                 && (this.getCustName() == null ? other.getCustName() == null : this.getCustName().equals(other.getCustName()))
-                && (this.getOperOrg() == null ? other.getOperOrg() == null : this.getOperOrg().equals(other.getOperOrg()))
                 && (this.getSignServiceId() == null ? other.getSignServiceId() == null : this.getSignServiceId().equals(other.getSignServiceId()));
     }
 
@@ -406,7 +413,6 @@ public class ContractStubData implements java.io.Serializable {
         result = prime * result + ((getDocStatus() == null) ? 0 : getDocStatus().hashCode());
         result = prime * result + ((getCustNo() == null) ? 0 : getCustNo().hashCode());
         result = prime * result + ((getCustName() == null) ? 0 : getCustName().hashCode());
-        result = prime * result + ((getOperOrg() == null) ? 0 : getOperOrg().hashCode());
         result = prime * result + ((getSignServiceId() == null) ? 0 : getSignServiceId().hashCode());
         return result;
     }
