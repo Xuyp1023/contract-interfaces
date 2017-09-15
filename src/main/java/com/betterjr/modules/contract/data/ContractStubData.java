@@ -122,6 +122,8 @@ public class ContractStubData implements java.io.Serializable {
     private String signServiceId;
     private Long contractTemplateId;
 
+    private String signFileName;
+
     /**
      * 签约结果数据
      */
@@ -319,6 +321,14 @@ public class ContractStubData implements java.io.Serializable {
         this.result = anResult;
     }
 
+    public String getSignFileName() {
+        return this.signFileName;
+    }
+
+    public void setSignFileName(final String anSignFileName) {
+        this.signFileName = anSignFileName;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder();
@@ -347,6 +357,7 @@ public class ContractStubData implements java.io.Serializable {
         sb.append(", custNo=").append(custNo);
         sb.append(", custName=").append(custName);
         sb.append(", signServiceId=").append(signServiceId);
+        sb.append(", signFileName=").append(signFileName);
         sb.append("]");
         return sb.toString();
     }
@@ -385,6 +396,7 @@ public class ContractStubData implements java.io.Serializable {
                 && (this.getDocStatus() == null ? other.getDocStatus() == null : this.getDocStatus().equals(other.getDocStatus()))
                 && (this.getCustNo() == null ? other.getCustNo() == null : this.getCustNo().equals(other.getCustNo()))
                 && (this.getCustName() == null ? other.getCustName() == null : this.getCustName().equals(other.getCustName()))
+                && (this.getSignFileName() == null ? other.getSignFileName() == null : this.getSignFileName().equals(other.getSignFileName()))
                 && (this.getSignServiceId() == null ? other.getSignServiceId() == null : this.getSignServiceId().equals(other.getSignServiceId()));
     }
 
@@ -414,6 +426,7 @@ public class ContractStubData implements java.io.Serializable {
         result = prime * result + ((getCustNo() == null) ? 0 : getCustNo().hashCode());
         result = prime * result + ((getCustName() == null) ? 0 : getCustName().hashCode());
         result = prime * result + ((getSignServiceId() == null) ? 0 : getSignServiceId().hashCode());
+        result = prime * result + ((getSignFileName() == null) ? 0 : getSignFileName().hashCode());
         return result;
     }
 }
