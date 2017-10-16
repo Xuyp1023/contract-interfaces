@@ -170,15 +170,21 @@ public class ContractTempStampPlaceData implements java.io.Serializable {
         }
         final ContractTempStampPlaceData other = (ContractTempStampPlaceData) that;
         return (this.getId() == null ? other.getId() == null : this.getId().equals(other.getId()))
-                && (this.getTemplateId() == null ? other.getTemplateId() == null : this.getTemplateId().equals(other.getTemplateId()))
-                && (this.getTemplateName() == null ? other.getTemplateName() == null : this.getTemplateName().equals(other.getTemplateName()))
-                && (this.getSignatory() == null ? other.getSignatory() == null : this.getSignatory().equals(other.getSignatory()))
-                && (this.getSequence() == null ? other.getSequence() == null : this.getSequence().equals(other.getSequence()))
+                && (this.getTemplateId() == null ? other.getTemplateId() == null
+                        : this.getTemplateId().equals(other.getTemplateId()))
+                && (this.getTemplateName() == null ? other.getTemplateName() == null
+                        : this.getTemplateName().equals(other.getTemplateName()))
+                && (this.getSignatory() == null ? other.getSignatory() == null
+                        : this.getSignatory().equals(other.getSignatory()))
+                && (this.getSequence() == null ? other.getSequence() == null
+                        : this.getSequence().equals(other.getSequence()))
                 && (this.getType() == null ? other.getType() == null : this.getType().equals(other.getType()))
-                && (this.getPagination() == null ? other.getPagination() == null : this.getPagination().equals(other.getPagination()))
+                && (this.getPagination() == null ? other.getPagination() == null
+                        : this.getPagination().equals(other.getPagination()))
                 && (this.getAxisX() == null ? other.getAxisX() == null : this.getAxisX().equals(other.getAxisX()))
                 && (this.getAxisY() == null ? other.getAxisY() == null : this.getAxisY().equals(other.getAxisY()))
-                && (this.getKeyWord() == null ? other.getKeyWord() == null : this.getKeyWord().equals(other.getKeyWord()));
+                && (this.getKeyWord() == null ? other.getKeyWord() == null
+                        : this.getKeyWord().equals(other.getKeyWord()));
     }
 
     @Override
