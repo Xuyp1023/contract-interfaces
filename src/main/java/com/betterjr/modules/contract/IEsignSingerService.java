@@ -27,6 +27,6 @@ public interface IEsignSingerService {
      *            签署后的电子合同文件
      * @return
      */
-    public ContractStubData signData(final Long anCustNo, final ContractStubData anStub, final byte[] anData, final String anVcode,
-            final Boolean anPerson);
+    public ContractStubData signData(final Long anCustNo, final ContractStubData anStub, final byte[] anData,
+            final String anVcode, final Boolean anPerson);
 }
